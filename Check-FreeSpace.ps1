@@ -64,7 +64,7 @@ function Class-Size($size)
 				$OutputObj | Add-Member -MemberType NoteProperty -Name Computer -Value $Computer.ToUpper()
 				
 				try {					
-					$Disk = Get-WmiObject Win32_LogicalDisk -ComputerName localhost -Filter "DeviceID='$Drive'" -ErrorAction Stop								
+					$Disk = Get-WmiObject Win32_LogicalDisk -ComputerName $Computer -Filter "DeviceID='$Drive'" -ErrorAction Stop								
 					$Status="Success"					
 				} catch {
 					Write-Verbose "Failed to check disk freespace on $Computer. Error: $_"
