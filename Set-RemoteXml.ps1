@@ -36,7 +36,7 @@ param(
 
 begin {
 	$ComputerName = 'localhost', 'DEV', 'Dummy' #Overriding
-	$Path = 'E:\Program Files\Fiserv\westpac.campaigns\Web.config'
+	$Path = 'E:\Program Files\Application\Site\Web.config'
 	$AttributeName = 'maxConcurrentInstances'
 	$XPath = "/configuration/system.serviceModel/behaviors/serviceBehaviors/behavior/serviceThrottling[@$AttributeName]"
 	$Value = '20'	
